@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Magic-Clause';
+    src: url('Magic-Clause.woff') format('woff');
+}
+.magic-clause {
+    font-family: 'Magic-Clause';
+}
+.positionY-36{
+    top: -36px;
+}
+.positionY-60{
+    top: -60px;
+}
+.centered-axis {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.bg-its{
+    background-color: #013880;
+}
