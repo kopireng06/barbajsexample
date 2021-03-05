@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/js/lightgallery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/css/lg-fb-comment-box.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/css/lg-transitions.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css"/>
+    <title>Document</title>
+</head>
+<body data-barba="wrapper">
+    <main class="relative w-full h-screen overflow-x-hidden" data-barba="container" data-barba-namespace="savethedate">
+        <div class="fixed w-full h-full bg-cover bg-center bg-no-repeat" style="background-image:url(savethedate.jpg);"></div>
+        <div class="bg fixed w-full h-full bg-black opacity-50"></div>
+        <div class="my-4 ml-6 overflow-hidden">
+            <span class="slide-number relative left-10 opacity-0 text-white font-bold">
+                03 
+            </span>
+            <span class="slide-number relative left-10 opacity-0 text-white font-bold">
+                / 03
+            </span>
+        </div>
+        <div class="mb-4 mr-6 flex flex-col">
+            <a href="couple.html" class="arrow-up slide-indicator opacity-0"><</a>
+            <a href="gallery.html" class="arrow-down slide-indicator opacity-0">></a>
+        </div>
+        <div class="w-full md:w-1/2 absolute-y-center overflow-hidden">
+            <!-- <div class="save-the-date font-bold relative -top-28 text-6xl text-center text-white">SAVE THE DATE</div> -->
+            <img src="" class="save-the-date h-28 md:h-64 block mx-auto mb-5" alt="">
+            <div class="countdown w-full flex justify-center mt-4">
+                <div class="1 border-2 border-white rounded h-16 md:h-28 w-16 md:w-28 mx-2 flex justify-center items-center text-white text-md md:text-4xl opacity-0 relative -bottom-10"></div>
+                <div class="2 border-2 border-white rounded h-16 md:h-28 w-16 md:w-28 mx-2 flex justify-center items-center text-white text-md md:text-4xl opacity-0 relative -bottom-10"></div>
+                <div class="3 border-2 border-white rounded h-16 md:h-28 w-16 md:w-28 mx-2 flex justify-center items-center text-white text-md md:text-4xl opacity-0 relative -bottom-10"></div>
+                <div class="4 border-2 border-white rounded h-16 md:h-28 w-16 md:w-28 mx-2 flex justify-center items-center text-white text-md md:text-4xl opacity-0 relative -bottom-10"></div>
+            </div>
+        </div>
+        <div class="wrapper-slider slider-center w-11/12 md:w-0 md:slider-center h-0 md:h-5/6 rounded-t-3xl md:rounded-l-3xl md:rounded-t-none bg-white bottom-0  md:bottom-auto md:right-0">
+            <div class="ini w-full h-full justify-center items-center" style="display: flex;">
+                <div class="flex flex-col items-center outline-none cursor-pointer">
+                    <div class="contoh magic-clause text-6xl lg:text-8xl my-2 text-center">Resepsi</div>
+                    <div class="contoh font-bold text-lg lg:text-3xl text-center my-2">Airlangga Convention Center</div>
+                    <div class="contoh text-sm lg:text-lg italic text-center my-4 mb-2"> Jl. Dr. Ir. H. Soekarno, Mulyorejo, Kec. 
+                        Mulyorejo, Kota SBY, Jawa Timur 60115</div>
+                    <div class="contoh text-sm lg:text-lg text-center my-2">06 Februari 2026 , 19:00-21:00 WIB</div>
+                </div>
+                <div class="flex flex-col items-center outline-none cursor-pointer">
+                    <div class="contoh magic-clause text-6xl lg:text-8xl my-2 text-center">Resepsi</div>
+                    <div class="contoh font-bold text-lg lg:text-3xl text-center my-2">Airlangga Convention Center</div>
+                    <div class="contoh text-sm lg:text-lg italic text-center my-4 mb-2"> Jl. Dr. Ir. H. Soekarno, Mulyorejo, Kec. 
+                        Mulyorejo, Kota SBY, Jawa Timur 60115</div>
+                    <div class="contoh text-sm lg:text-lg text-center my-2">06 Februari 2026 , 19:00-21:00 WIB</div>
+                </div>
+                <div class="flex flex-col items-center outline-none cursor-pointer">
+                    <div class="contoh magic-clause text-6xl lg:text-8xl my-2 text-center">Resepsi</div>
+                    <div class="contoh font-bold text-lg lg:text-3xl text-center my-2">Airlangga Convention Center</div>
+                    <div class="contoh text-sm lg:text-lg italic text-center my-4 mb-2"> Jl. Dr. Ir. H. Soekarno, Mulyorejo, Kec. 
+                        Mulyorejo, Kota SBY, Jawa Timur 60115</div>
+                    <div class="contoh text-sm lg:text-lg text-center my-2">06 Februari 2026 , 19:00-21:00 WIB</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="fixed sidebar top-0 w-full bg-its h-0">
+        <div class="relative top-0 w-full h-20">
+            <svg viewBox="0 0 12 10" class="hamburger absolute -top-10 right-0 opacity-0 mr-2 mt-4" height="30px" width="50px">
+                <path d="M10,2 L2,2" class="upper" style="fill: none;stroke-linecap: round;"/>
+                <path d="M2,5 L10,5" class="middle" style="fill: none;stroke-linecap: round;"/>
+                <path d="M10,8 L2,8" class="lower" style="fill: none;stroke-linecap: round;"/>   
+            </svg>
+        </div>
+        <div class="absolute centered-axis text-center">
+            <div class="overflow-hidden my-1">
+                <div class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
+                    HOME
+                </div>
+            </div>
+            <div class="overflow-hidden my-1">
+                <div class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
+                    COUPLE
+                </div>
+            </div>
+            <div class="overflow-hidden my-1">
+                <div class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
+                    EVENT
+                </div>
+            </div>
+            <div class="overflow-hidden my-1">
+                <div class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
+                    GALLERY
+                </div>
+            </div>
+            <div class="overflow-hidden my-1">
+                <div class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
+                    WISHES
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="transitioner fixed w-full bg-green-400"></div>
+</body>
+<script src="script.js"></script>
+<script src="script2.js"></script>
+</html> 

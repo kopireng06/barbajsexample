@@ -18,43 +18,8 @@
     <title>Document</title>
 </head>
 <body data-barba="wrapper">
-    <main class="relative w-full h-screen overflow-x-hidden" data-barba="container" data-barba-namespace="home">
-        <div class="jumbotron w-full h-full mx-auto shadow-md rounded bg-center bg-cover bg-no-repeat" style="background-image: url(rabi.jpg);"></div>
-        <div class="fixed w-full h-full bg-black opacity-30 top-0"></div>
-        <div class="fixed w-full h-full flex flex-col justify-between top-0">
-            <div class="flex-1 flex justify-end text-white"></div>
-            <div class="flex-1 flex flex-col justify-center items-center">
-                <div class="overflow-hidden">
-                    <div class="invit relative invisible text-lg md:text-4xl text-white">
-                        THE WEDDING OF
-                    </div>
-                </div>
-                <div class="overflow-hidden">
-                    <div class="name relative invisible text-4xl md:text-8xl magic-clause text-white">
-                        Dinar dan Farhan
-                    </div>
-                </div>
-                <div class="overflow-hidden">
-                    <div class="date relative invisible text-4xl magic-clause text-white">
-                        15 . 01. 2021
-                    </div>
-                </div>
-            </div>
-            <div class="flex-1 flex items-end justify-between">
-                <div class="mb-4 ml-6 overflow-hidden">
-                    <span class="slide-number relative left-10 opacity-0 text-white font-bold">
-                        01 
-                    </span>
-                    <span class="slide-number relative left-10 opacity-0 text-white font-bold">
-                        / 03
-                    </span>
-                </div>
-                <div class="mb-4 mr-6 flex flex-col">
-                    <a href="#" class="slide-indicator cursor-pointer text-white relative -top-10 opacity-0 text-sm md:text-3xl font-mono font-bold transform rotate-90 mb-5"><</a>
-                    <a href="couple.html" class="arrow-down slide-indicator cursor-pointer text-white relative top-10 opacity-0  text-sm md:text-3xl font-mono font-bold transform rotate-90">></a>
-                </div>
-            </div>
-        </div>
+    <main data-barba="container" data-barba-namespace="index">
+        <a class="mt-60 block" id="klik" href="gsapp.html">kliken WOI</a>
     </main>
     <div class="fixed sidebar top-0 w-full bg-its h-0">
         <div class="relative top-0 w-full h-20">
@@ -94,6 +59,11 @@
     </div>
     <div class="transitioner fixed w-full bg-green-400"></div>
 </body>
+<script>
+    $('#klik').click(function(){
+        document.documentElement.requestFullscreen(); 
+    })
+</script>
 <script src="script.js"></script>
 <script src="script2.js"></script>
 </html>

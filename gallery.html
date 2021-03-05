@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/js/lightgallery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/css/lg-fb-comment-box.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/css/lg-transitions.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css"/>
+    <title>Document</title>
+</head>
+<body data-barba="wrapper">
+    <main class="relative w-full relative h-screen overflow-hidden" data-barba="container" data-barba-namespace="gallery">
+        <div class="gallery w-full h-screen grid grid-cols-12 grid-rows-6 md:grid-rows-3 gap-0.5 md:gap-2 bg-black cursor-pointer">
+            <div data-src="gallery-1.jpg" class="wrapper-pict col-span-6 md:col-span-4 row-span-2 overflow-hidden bg-black opacity-80">
+                <div id="pict-1" class="transform opacity-0 -translate-x-full w-100 h-full bg-cover bg-center bg-no-repeat" style="background-image: url('gallery-1.jpg');"></div>
+            </div>
+            <div data-src="gallery-2.jpg" class="wrapper-pict col-span-6 md:col-span-5 row-span-1 overflow-hidden bg-black opacity-80 cursor-pointer">
+                <div id="pict-2" class="transform opacity-0 translate-x-full w-100 h-full bg-cover bg-center bg-no-repeat" style="background-image: url('gallery-2.jpg');"></div>
+            </div>
+            <div data-src="gallery-3.jpg" class="wrapper-pict col-span-6 md:col-span-3 row-span-1 bg-black opacity-80 cursor-pointer">
+                <div  id="pict-3" class="opacity-0 w-100 h-full bg-cover bg-center bg-no-repeat" style="background-image: url('gallery-3.jpg');"></div>
+            </div>
+            <div data-src="gallery-4.jpg" class="wrapper-pict col-span-8 md:col-span-3 row-span-1 md:row-span-2 bg-black opacity-80 cursor-pointer">
+                <div id="pict-4" class="opacity-0 w-100 h-full bg-cover bg-center bg-no-repeat" style="background-image: url('gallery-4.jpg');"></div>
+            </div>
+            <div data-src="gallery-5.jpg" class="wrapper-pict col-span-4 md:col-span-2 row-span-1 bg-black opacity-80 cursor-pointer">
+                <div id="pict-5" class="opacity-0 w-100 h-full bg-cover bg-center bg-no-repeat" style="background-image: url('gallery-5.jpg');"></div>
+            </div>
+            <div  data-src="gallery-6.jpg" class="wrapper-pict col-span-7 md:col-span-3 row-span-3 md:row-span-2 overflow-hidden bg-black opacity-80 cursor-pointer">
+                <div id="pict-6" class="transform opacity-0 -translate-y-full w-100 h-full bg-cover bg-center bg-no-repeat" style="background-image: url('gallery-6.jpg');"></div>
+            </div>
+            <div href="gallery-7.jpg" class="wrapper-pict col-span-5 md:col-span-4 row-span-1 overflow-hidden bg-black opacity-80 cursor-pointer">
+                <div id="pict-7" class="transform translate-y-full opacity-0 w-100 h-full bg-cover bg-center bg-no-repeat" style="background-image: url('gallery-7.jpg');"></div>
+            </div>
+            <div href="gallery-8.jpg" class="wrapper-pict col-span-5 md:col-span-2 row-span-2 md:row-span-1 bg-black opacity-80 cursor-pointer">
+                <div id="pict-8" class="opacity-0 w-100 h-full bg-cover bg-center bg-no-repeat" style="background-image: url('gallery-8.jpg');"></div>
+            </div>
+        </div>
+        <div class="absolute-center text-center overflow-hidden">
+            <div class="welcome text-2xl md:text-7xl font-bold text-white mb-3 transform -translate-y-full">WELCOME</div>
+            <div class="welcome text-lg md:text-5xl font-semibold text-white transform translate-y-full">TO OUR GALLERY</div>
+        </div>
+        <a href="savethedate.html" class="arrow-up">UP</a>
+        <a href="wish.html" class="arrow-down">down</a>
+    </main>
+    <div class="fixed sidebar top-0 w-full bg-its h-0">
+        <div class="relative top-0 w-full h-20">
+            <svg viewBox="0 0 12 10" class="hamburger absolute -top-10 right-0 opacity-0 mr-2 mt-4" height="30px" width="50px">
+                <path d="M10,2 L2,2" class="upper" style="fill: none;stroke-linecap: round;"/>
+                <path d="M2,5 L10,5" class="middle" style="fill: none;stroke-linecap: round;"/>
+                <path d="M10,8 L2,8" class="lower" style="fill: none;stroke-linecap: round;"/>   
+            </svg>
+        </div>
+        <div class="absolute centered-axis text-center">
+            <div class="overflow-hidden my-1">
+                <div class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
+                    HOME
+                </div>
+            </div>
+            <div class="overflow-hidden my-1">
+                <div class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
+                    COUPLE
+                </div>
+            </div>
+            <div class="overflow-hidden my-1">
+                <div class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
+                    EVENT
+                </div>
+            </div>
+            <div class="overflow-hidden my-1">
+                <div class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
+                    GALLERY
+                </div>
+            </div>
+            <div class="overflow-hidden my-1">
+                <div class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
+                    WISHES
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="transitioner fixed w-full bg-green-400"></div>
+</body>
+<script src="script.js"></script>
+<script src="script2.js"></script>
+</html>

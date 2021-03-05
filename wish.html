@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/js/lightgallery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/css/lg-fb-comment-box.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/css/lg-transitions.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css"/>
+    <title>Document</title>
+</head>
+<body data-barba="wrapper">
+    <main class="relative h-screen" data-barba="container" data-barba-namespace="wish">
+        <div class="fixed w-full h-full bg-cover bg-center bg-no-repeat" style="background-image:url(rabi.jpg);"></div>
+        <div class="fixed w-full h-full bg-black opacity-10"></div>
+        <a href="gallery.html" class="arrow-up fixed z-10 top-0 text-white text-sm font-semibold m-3 left-5 opacity-0">< BACK</a>
+        <div class="relative w-11/12 lg:w-5/12 h-3/5 flex flex-col justify-end items-start mx-auto">
+            <div class="flex flex-col justify-center items-center w-full flex-1">
+                <div class="flex justify-center items-center w-full">
+                    <div class="relative z-10 foto-respon border-white rounded-full w-0 h-0 overflow-hidden">
+                        <img src="faza.jpg" class="object-cover h-full w-full" alt="">
+                    </div>
+                    <img src="like-2.svg" class="hati-jempol h-24 transform -translate-x-full opacity-0" alt="">
+                </div>
+                <div class="name-liked relative z-0 transform -translate-y-full p-3 mt-5 rounded font-bold text-xl opacity-0 bg-white">Cak Shodiq Liked it</div>
+            </div>
+            <div class="flex wrapper-responer relative left-20 opacity-0">
+                <img src="comment.svg" class="h-8 mx-2 relative block" alt="">
+                <div class="counter-message absolute text-red-500 text-xs font-bold h-6 w-6 flex items-center justify-center bg-white rounded-full bottom-5 left-7">0</div>
+                <img src="thumb-up.svg" class="like-button h-8 mx-2 relative block -top-2 cursor-pointer">
+                <img src="heart.svg" class="heart-button h-8 mx-2 relative block -top-1 cursor-pointer">
+            </div>
+        </div>
+        <div class="scroll-wish fixed bottom-0 h-0 w-full flex justify-end md:justify-center">
+            <div class="hidden lg:block lg:w-2/12">
+            
+            </div>
+            <div id="coba" class="overflow-y-scroll w-full lg:w-6/12 md:px-5">
+                <div class="keong w-full flex items-center my-3 transition-all duration-500">
+                    <div class="h-8 hidden md:block md:h-16 w-8 md:w-16 rounded-full shadow-sm bg-cover bg-center bg-no-repeat" style="background-image: url(faza.jpg);"></div>
+                    <div class="flex-1 mx-5 p-3 bg-komentar rounded shadow flex flex-col">
+                        <div class="text-xs md:text-sm font-bold my-1">Fulan bin fulan</div>
+                        <div class="text-xs md:text-sm my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Vitae voluptates fugit quis. Alias soluta ratione illum id at maxime.</div>
+                    </div>
+                </div>
+                <div class="keong w-full flex items-center my-3 transition-all duration-500">
+                    <div class="h-8 hidden md:block md:h-16 w-8 md:w-16 rounded-full shadow-sm bg-cover bg-center bg-no-repeat" style="background-image: url(faza.jpg);"></div>
+                    <div class="flex-1 mx-5 p-3 bg-komentar rounded shadow flex flex-col">
+                        <div class="text-xs md:text-sm font-bold my-1">Fulan bin fulan</div>
+                        <div class="text-xs md:text-sm my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Vitae voluptates fugit quis. Alias soluta ratione illum id at maxime.</div>
+                    </div>
+                </div>
+                <div class="keong w-full flex items-center my-3 transition-all duration-500">
+                    <div class="h-8 hidden md:block md:h-16 w-8 md:w-16 rounded-full shadow-sm bg-cover bg-center bg-no-repeat" style="background-image: url(faza.jpg);"></div>
+                    <div class="flex-1 mx-5 p-3 bg-komentar rounded shadow flex flex-col">
+                        <div class="text-xs md:text-sm font-bold my-1">Fulan bin fulan</div>
+                        <div class="text-xs md:text-sm my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Vitae voluptates fugit quis. Alias soluta ratione illum id at maxime.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="heart-container w-2/12 h-full absolute md:relative overflow-hidden opacity-0"></div>
+        </div>
+    </main>
+    <div class="fixed sidebar top-0 w-full bg-its h-0">
+        <div class="relative top-0 w-full h-20">
+            <svg viewBox="0 0 12 10" class="hamburger absolute -top-10 right-0 opacity-0 mr-2 mt-4" height="30px" width="50px">
+                <path d="M10,2 L2,2" class="upper" style="fill: none;stroke-linecap: round;"/>
+                <path d="M2,5 L10,5" class="middle" style="fill: none;stroke-linecap: round;"/>
+                <path d="M10,8 L2,8" class="lower" style="fill: none;stroke-linecap: round;"/>   
+            </svg>
+        </div>
+        <div class="absolute centered-axis text-center">
+            <div class="overflow-hidden my-1">
+                <div class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
+                    HOME
+                </div>
+            </div>
+            <div class="overflow-hidden my-1">
+                <div class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
+                    COUPLE
+                </div>
+            </div>
+            <div class="overflow-hidden my-1">
+                <div class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
+                    EVENT
+                </div>
+            </div>
+            <div class="overflow-hidden my-1">
+                <div class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
+                    GALLERY
+                </div>
+            </div>
+            <div class="overflow-hidden my-1">
+                <div class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
+                    WISHES
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="transitioner fixed w-full bg-green-400"></div>
+</body>
+<script src="script.js"></script>
+<script src="script2.js"></script>
+</html>
