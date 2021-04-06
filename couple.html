@@ -18,28 +18,39 @@
     <title>Document</title>
 </head>
 <body data-barba="wrapper">
-    <main class="relative w-full h-screen overflow-x-hidden" data-barba="container" data-barba-namespace="couple">
+    <main class="relative w-full h-screen overflow-hidden" data-barba="container" data-barba-namespace="couple">
+        <div class="h-full w-full fixed top-0" style="z-index: -10;">
+            <div class="dedaunan-p-ki-a h-56 w-56 bg-top bg-contain bg-no-repeat absolute -top-20 left-0 opacity-0" style="background-image: url('dedaunan-pka.png');"></div>
+            <div class="dedaunan-p-ka-b h-56 w-56 bg-bottom bg-contain bg-no-repeat absolute -bottom-20 right-0 opacity-0" style="background-image: url('dedaunan-pkb.png');"></div></div>
+        </div>
         <div class="lg:container mx-auto h-full flex flex-col justify-center">
             <div class="w-full my-10 px-4">
                 <div class="ucapan opacity-0 relative -top-16 text-center font-bold text-4xl">We Are Getting Married</div>
             </div>
-            <div class="w-9/12 sm:w-9/12 md:w-7/12 mx-auto flex items-center justify-between">
-                <div class="foto-mempelai opacity-0 h-32 sm:h-56 w-32 sm:w-56 rounded-full bg-center bg-no-repeat" style="background-image: url('faza.jpg');background-size: 130%;"></div>
+            <div class="w-9/12 sm:w-9/12 md:w-8/12 mx-auto flex items-center justify-between">
+                <div class="flex-1">
+                    <div class="foto-mempelai mx-auto opacity-0 h-32 sm:h-44 lg:h-56 w-32 sm:w-44 lg:w-56 rounded-full bg-center bg-no-repeat" style="background-image: url('faza.jpg');background-size: 130%;"></div>
+                </div>
                 <div class="h-auto overflow-hidden">
                     <div class="love relative -top-24 text-4xl md:text-6xl lg:text-8xl font-bold">&</div>
                 </div>
-                <div class="foto-mempelai opacity-0 h-32 sm:h-56 w-32 sm:w-56 rounded-full bg-center bg-no-repeat" style="background-image: url('cinta.jpg');background-size: 130%;"></div>
+                <div class="flex-1">
+                    <div class="foto-mempelai mx-auto opacity-0 h-32 sm:h-44 lg:h-56 w-32 sm:w-44 lg:w-56 rounded-full bg-center bg-no-repeat" style="background-image: url('cinta.jpg');background-size: 130%;"></div>
+                </div>
             </div>
-            <div class="w-9/12 mx-auto flex flex-col md:flex-row justify-between mt-7 md:mt-0">
-                <div class="flex flex-col text-center mt-3">
+            <div class="w-9/12 sm:w-9/12 md:w-8/12 mx-auto flex flex-col md:flex-row justify-between mt-7 md:mt-0">
+                <div class="flex flex-1 flex-col text-center mt-3">
                     <div class="overflow-hidden">
                         <div class="nama relative -top-10 text-lg md:text-xl font-semibold text-blue-700">Faza Hermawan Hendarto</div>
                     </div>
                     <div class="overflow-hidden">
-                        <div class="orang-tua relative -bottom-10 max-w-md text-sm md:text-md">Putra Pertama Ir. H. Erwin Lukman Hakim & Hj. Endah Susilowati, SE, MT</div>
+                        <div class="orang-tua relative -bottom-10 mx-auto max-w-md text-sm md:text-md">Putra Pertama Ir. H. Erwin Lukman Hakim & Hj. Endah Susilowati, SE, MT</div>
                     </div>
                 </div>
-                <div class="flex flex-col text-center mt-3">
+                <div class="h-auto overflow-hidden">
+                    <div class="opacity-0 relative -top-24 text-4xl md:text-6xl lg:text-8xl font-bold">&</div>
+                </div>
+                <div class="flex flex-1 flex-col text-center mt-3">
                     <div class="overflow-hidden">
                         <div class="nama relative -top-10 text-lg md:text-xl font-semibold text-blue-700">Faza Hermawan Hendarto</div>
                     </div>
@@ -49,7 +60,7 @@
                 </div>
             </div>
         </div>
-        <div class="fixed flex justify-between items-end w-full bottom-0">
+        <!-- <div class="fixed flex justify-between items-end w-full bottom-0">
             <div class="mb-4 ml-6 overflow-hidden">
                 <span class="slide-number relative left-10 opacity-0 font-bold">
                     02 
@@ -58,49 +69,49 @@
                     / 03
                 </span>
             </div>
-            <div class="mb-4 mr-6 flex flex-col">
+            <div class="mb-4 mr-6 flex flex-col"> -->
                 <a href="gsapp.html" class="arrow-up slide-indicator opacity-0 cursor-pointer relative -top-10 text-sm md:text-3xl font-mono font-bold transform rotate-90 mb-5"><</a>
                 <a href="savethedate.html" class="arrow-down slide-indicator opacity-0 cursor-pointer relative top-10 text-sm md:text-3xl font-mono font-bold transform rotate-90">></a>
-            </div>
-        </div>
+            <!-- </div>
+        </div> -->
     </main>
-    <div class="fixed sidebar top-0 w-full bg-its h-0">
+    <div class="fixed z-10 sidebar top-0 w-full bg-its h-0">
         <div class="relative top-0 w-full h-20">
             <svg viewBox="0 0 12 10" class="hamburger absolute -top-10 right-0 opacity-0 mr-2 mt-4" height="30px" width="50px">
-                <path d="M10,2 L2,2" class="upper" style="fill: none;stroke: #000000;stroke-linecap: round;"/>
-                <path d="M2,5 L10,5" class="middle" style="fill: none;stroke: #000000;stroke-linecap: round;"/>
-                <path d="M10,8 L2,8" class="lower" style="fill: none;stroke: #000000;stroke-linecap: round;"/>   
+                <path d="M10,2 L2,2" class="upper" style="fill: none;stroke-linecap: round;"/>
+                <path d="M2,5 L10,5" class="middle" style="fill: none;stroke-linecap: round;"/>
+                <path d="M10,8 L2,8" class="lower" style="fill: none;stroke-linecap: round;"/>   
             </svg>
         </div>
         <div class="absolute centered-axis text-center">
             <div class="overflow-hidden my-1">
-                <div class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
+                <a href="gsapp.html" class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
                     HOME
-                </div>
+                </a>
             </div>
             <div class="overflow-hidden my-1">
-                <div class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
+                <a href="couple.html" class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
                     COUPLE
-                </div>
+                </a>
             </div>
             <div class="overflow-hidden my-1">
-                <div class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
+                <a href="savethedate.html" class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
                     EVENT
-                </div>
+                </a>
             </div>
             <div class="overflow-hidden my-1">
-                <div class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
+                <a href="gallery.html" class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
                     GALLERY
-                </div>
+                </a>
             </div>
             <div class="overflow-hidden my-1">
-                <div class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
+                <a href="wish.html" class="link relative bottom-10 my-1 text-4xl magic-clause text-white">
                     WISHES
-                </div>
+                </a>
             </div>
         </div>
-        </div>
-        <div class="transitioner fixed w-full bg-green-400"></div>
+    </div>
+    <div class="transitioner fixed w-full bg-green-400"></div>
 </body>
 
 <script src="script.js"></script>
