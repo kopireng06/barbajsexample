@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap');
+.lobster-two {
+  font-family: 'Lobster Two';
+}
+@font-face {
+    font-family: 'Magic-Clause';
+    src: url('Magic-Clause.woff') format('woff');
+}
+.magic-clause {
+    font-family: 'Magic-Clause';
+}
+.bg-komentar{
+  background:rgba(255,255,255,0.6);
+}
+
+div::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+div::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+div::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+div::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+div::-webkit-scrollbar-thumb:active {
+  background: transparent;
+}
+div::-webkit-scrollbar-track {
+  background: transparent;
+  border: 0px none #ffffff;
+  border-radius: 30px;
+}
+div::-webkit-scrollbar-track:hover {
+  background: transparent;
+}
+div::-webkit-scrollbar-track:active {
+  background: transparent;
+}
+div::-webkit-scrollbar-corner {
+  background: transparent;
+}
