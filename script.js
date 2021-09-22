@@ -160,7 +160,7 @@ $(document).ready(function() {
             coba2.to('.bg',{backgroundColor:'rgb(0, 0, 0)',duration:3,ease:'linear'});
             coba2.repeat(-1);
 
-            var countDownDate = new Date("Apr 28, 2021 15:37:25").getTime();
+            var countDownDate = new Date("Nov 21, 2021 09:00:00").getTime();
             var x = setInterval(function() {
             var now = new Date().getTime();
             var distance = countDownDate - now;
