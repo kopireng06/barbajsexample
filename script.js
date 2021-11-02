@@ -37,10 +37,17 @@ $(document).ready(function () {
         }
     }
 
+    // $('#klik').click(function () {
+    // })
+
     $("#klik").click(function () {
-        console.log("berhasil klik");
         var sample = new Sound("sample.mp3", 100, true);
         sample.start();
+        try {
+            document.documentElement.requestFullscreen();
+        } catch (e) {
+            console.log("Mboten saget full screen");
+        }
     })
 
     function homeAnimation() {
