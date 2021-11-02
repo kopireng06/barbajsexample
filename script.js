@@ -37,9 +37,9 @@ $(document).ready(function () {
         }
     }
 
-    var sample = new Sound("sample.mp3", 100, true);
-
     $("#klik").click(function () {
+        console.log("berhasil klik");
+        var sample = new Sound("sample.mp3", 100, true);
         sample.start();
     })
 
