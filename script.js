@@ -37,7 +37,7 @@ $(document).ready(function () {
         }
     }
 
-    var sample = new Sound("http://192.168.1.19:8000/sample.mp3", 100, true);
+    var sample = new Sound("sample.mp3", 100, true);
 
     $("#klik").click(function () {
         sample.start();
