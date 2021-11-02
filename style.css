@@ -2,8 +2,20 @@
     font-family: 'Magic-Clause';
     src: url('Magic-Clause.woff') format('woff');
 }
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 .magic-clause {
     font-family: 'Magic-Clause';
+}
+.lobster-two {
+  font-family: 'Lobster Two', cursive;
+}
+.nunito {
+  font-family: 'Nunito', sans-serif;
+}
+.roboto {
+  font-family: 'Roboto', sans-serif;
 }
 .positionY-36{
     top: -36px;
@@ -18,7 +30,7 @@
     transform: translate(-50%, -50%);
 }
 .bg-its{
-    background-color: #013880;
+    background: linear-gradient(#08019a,#0082ff);
 }
 .fixed-x-center{
     position: fixed;
@@ -63,6 +75,9 @@
 }
 .bg-komentar{
     background:rgba(255,255,255,0.6);
+}
+.bg-transitioner {
+  background: radial-gradient(circle, rgba(111,202,249,1) 28%, rgba(0,130,255,1) 100%);
 }
 
  
