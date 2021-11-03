@@ -18,7 +18,7 @@ $(document).ready(function () {
                 // $("#template-comment-name").html(data.name);
                 // $("#template-comment-desc").html(data.comment);
                 $("#coba").append(tmp);
-                wishAnimation();
+                // wishAnimation();
             });
             $("#coba").show();
         },
