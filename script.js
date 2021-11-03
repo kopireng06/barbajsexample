@@ -258,7 +258,7 @@ $(document).ready(function () {
             $('.ini').slick({
                 arrows: false,
                 dots: false,
-                autoplay: true,
+                autoplay: false,
                 autoplaySpeed: 4000
             });
             var a = $('.slick-active');
