@@ -189,6 +189,7 @@ $(document).ready(function () {
             let timeline = gsap.timeline();
             await initTimeLineSlider();
             timeline.delay(1.4);
+            timeline.set('.story-title', { attr: { src: "story-title.gif" }});
             timeline.to(".timeline-title", { top: 0, opacity: 1, duration: 0.5, ease: "power4" });
             timeline.to(".timeline-slider", { opacity: 1, duration: 1.2, ease: "power4" });
             timeline.to(".hamburger", { top: 0, opacity: 1, duration: 1, delay: -0.8, ease: "power4" });
@@ -637,6 +638,7 @@ $(document).ready(function () {
         leave.set(".transitioner", { bottom: '', top: 0 });
         leave.to(".transitioner", { height: '0', duration: 1.5, ease: "expo" });
         leave.set('.save-the-date', { attr: { src: "" } });
+        leave.set('.story-title', { attr: { src: "" } });
         setTimeout(function () {
             $('.ini').slick('unslick');
         }, 1000)
