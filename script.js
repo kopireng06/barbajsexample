@@ -2,31 +2,6 @@ const comment_template = '<div class="keong w-full flex items-center my-3 transi
 const comment_url = 'http://172.104.170.68:5000/Comment'
 $(document).ready(function () {
 
-    $.ajax({
-        url: comment_url,
-        type: 'GET',
-        dataType: 'json',
-        headers: {
-            'token': '1234abcde',
-        },
-        success: function (result) {
-            console.log(result);
-            result.Data.forEach(function (data, index) {
-                var tmp = comment_template;
-                tmp = tmp.replace("comment-name", data.name);
-                tmp = tmp.replace("comment-desc", data.comment);
-                // $("#template-comment-name").html(data.name);
-                // $("#template-comment-desc").html(data.comment);
-                $("#coba").append(tmp);
-                // wishAnimation();
-            });
-            $("#coba").show();
-        },
-        error: function (error) {
-
-        }
-    });
-
     // source: https://stackoverflow.com/a/11331200/4298200
     class Sound {
         constructor(source, volume, loop) {
@@ -441,6 +416,38 @@ $(document).ready(function () {
     }
 
     function wishAnimation() {
+        $.ajax({
+            url: comment_url,
+            type: 'GET',
+            dataType: 'json',
+            headers: {
+                'token': '1234abcde',
+            },
+            success: function (result) {
+                console.log(result);
+                result.Data.forEach(function (data, index) {
+                    var tmp = comment_template;
+                    tmp = tmp.replace("comment-name", data.name);
+                    tmp = tmp.replace("comment-desc", data.comment);
+                    // $("#template-comment-name").html(data.name);
+                    // $("#template-comment-desc").html(data.comment);
+                    $("#coba").append(tmp);
+                    // wishAnimation();
+                });
+                var wish = gsap.timeline();
+                wish.delay(2);
+                wish.to('.scroll-wish', { height: '40%', duration: 1, ease: 'power4', delay: 1 });
+                wish.to($('.wrapper-responer'), { left: 0, opacity: 1, duration: 0.5 });
+                wish.to('.arrow-up', { opacity: 1 });
+                wish.to('.heart-container', { opacity: 1, duration: 1, delay: 1 });
+                wish.to(".hamburger", { top: 0, opacity: 1, duration: 2.2, delay: -1.6, ease: "power4" });
+                wish.to($('.hamburger').children(), { stroke: '#FFFFFF', delay: -2 });
+                $("#coba").show();
+            },
+            error: function (error) {
+    
+            }
+        });
         let options = {
             rootMargin: '0px 0px 0px 0px',
             threshold: 0.7
@@ -618,15 +625,6 @@ $(document).ready(function () {
                 $('.arrow-up')[0].click();
             })
         })
-
-        var wish = gsap.timeline();
-        wish.delay(2);
-        wish.to('.scroll-wish', { height: '40%', duration: 1, ease: 'power4', delay: 1 });
-        wish.to($('.wrapper-responer'), { left: 0, opacity: 1, duration: 0.5 });
-        wish.to('.arrow-up', { opacity: 1 });
-        wish.to('.heart-container', { opacity: 1, duration: 1, delay: 1 });
-        wish.to(".hamburger", { top: 0, opacity: 1, duration: 2.2, delay: -1.6, ease: "power4" });
-        wish.to($('.hamburger').children(), { stroke: '#FFFFFF', delay: -2 });
         var heartAnimation = setInterval(heartAnimation, 150);
         var removeHeart = setInterval(removeHeart, 2500);
     }
