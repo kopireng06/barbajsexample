@@ -76,6 +76,14 @@
     left: 50%;
     transform: translateX(-50%);
 }
+.ini > .slick-list > .slick-track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.maps-savethedate {
+  height: 300px !important;
+}
 .slick-slide.slick-current.slick-active {
     outline: none;
 }
