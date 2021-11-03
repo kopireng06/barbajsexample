@@ -1,4 +1,31 @@
+const comment_template = '<div class="keong w-full flex items-center my-3 transition-all duration-500"><div class="flex-1 mx-5 p-3 bg-komentar rounded shadow flex flex-col"><div class="text-xs md:text-sm font-bold my-1">comment-name</div><div class="text-xs md:text-sm my-1">comment-desc</div></div></div>';
+const comment_url = 'http://172.104.170.68:5000/Comment'
 $(document).ready(function () {
+
+    $.ajax({
+        url: comment_url,
+        type: 'GET',
+        dataType: 'json',
+        headers: {
+            'token': '1234abcde',
+        },
+        success: function (result) {
+            console.log(result);
+            result.Data.forEach(function (data, index) {
+                var tmp = comment_template;
+                tmp = tmp.replace("comment-name", data.name);
+                tmp = tmp.replace("comment-desc", data.comment);
+                // $("#template-comment-name").html(data.name);
+                // $("#template-comment-desc").html(data.comment);
+                $("#coba").append(tmp);
+                wishAnimation();
+            });
+            $("#coba").show();
+        },
+        error: function (error) {
+
+        }
+    });
 
     // source: https://stackoverflow.com/a/11331200/4298200
     class Sound {
@@ -175,62 +202,62 @@ $(document).ready(function () {
 
     }
 
-    function timelineAnimation(){
-        async function initTimeLineSlider(){
+    function timelineAnimation() {
+        async function initTimeLineSlider() {
             $('.timeline-slider').slick({
-                centerMode:true,
-                arrows:false,
-                dots:true
+                centerMode: true,
+                arrows: false,
+                dots: true
             });
         }
-        async function animateTimeline(){
+        async function animateTimeline() {
             let timeline = gsap.timeline();
             await initTimeLineSlider();
             timeline.delay(1.4);
-            timeline.to(".timeline-title",{top:0,opacity:1,duration:0.5,ease:"power4"});
-            timeline.to(".timeline-slider",{opacity:1,duration:1.2,ease:"power4"});
-            timeline.to(".hamburger", {top:0 , opacity:1, duration:1 ,delay:-0.8 ,ease:"power4"});
-            timeline.to($('.hamburger').children(),{stroke:'#000000',delay:-2});  
+            timeline.to(".timeline-title", { top: 0, opacity: 1, duration: 0.5, ease: "power4" });
+            timeline.to(".timeline-slider", { opacity: 1, duration: 1.2, ease: "power4" });
+            timeline.to(".hamburger", { top: 0, opacity: 1, duration: 1, delay: -0.8, ease: "power4" });
+            timeline.to($('.hamburger').children(), { stroke: '#000000', delay: -2 });
         }
         animateTimeline();
-        setTimeout(function(){
+        setTimeout(function () {
             var countWheel = 0;
-            $(window).bind('mousewheel', function(event) {
-                countWheel = countWheel+1;
-                if(countWheel == 1){
-                    if (event.originalEvent.wheelDelta >= 0) {     
+            $(window).bind('mousewheel', function (event) {
+                countWheel = countWheel + 1;
+                if (countWheel == 1) {
+                    if (event.originalEvent.wheelDelta >= 0) {
                         $('.arrow-up')[0].click();
                     }
                     else {
                         $('.arrow-down')[0].click();
                     }
                 }
-            }); 
-        },2000);
+            });
+        }, 2000);
 
         var countKeyDown = 0;
         window.addEventListener("keydown", function (event) {
-            countKeyDown = countKeyDown+1;
-            if (countKeyDown ==1 ){
+            countKeyDown = countKeyDown + 1;
+            if (countKeyDown == 1) {
                 switch (event.key) {
                     case "ArrowDown":
-                      $('.arrow-down')[0].click();
-                    return;
+                        $('.arrow-down')[0].click();
+                        return;
                     case "ArrowUp":
-                      $('.arrow-up')[0].click();
-                    return;
+                        $('.arrow-up')[0].click();
+                        return;
                 }
-            }      
+            }
         }, true);
 
-        $(function(){
+        $(function () {
             var body = document.getElementsByTagName('main')[0];
             hammer = new Hammer(body);
             hammer.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-            hammer.on('swipeup',function(){
+            hammer.on('swipeup', function () {
                 $('.arrow-down')[0].click();
             });
-            hammer.on('swipedown',function(){
+            hammer.on('swipedown', function () {
                 $('.arrow-up')[0].click();
             })
         })
@@ -258,7 +285,8 @@ $(document).ready(function () {
             $('.ini').slick({
                 arrows: false,
                 dots: false,
-                autoplay: false,
+                autoplay: true,
+                infinite: true,
                 autoplaySpeed: 4000
             });
             var a = $('.slick-active');
@@ -455,14 +483,43 @@ $(document).ready(function () {
             // target.forEach((i)=>observer.observe(i));
             wish.to('.arrow-up', { opacity: 0 });
         });
-        
-        $('.wish-button').click(function(){
+
+        $('.wish-button').click(function () {
             $("#coba").hide();
             $(".form-wish").show();
         })
 
-        $('.submit-wish-button').click(function(e){
+        $('#submit-wish-button').click(function (e) {
             e.preventDefault();
+
+            if ($("#form-wish-name").val() != "" && $("#form-wish-comment").val() != "") {
+                var name = $("#form-wish-name").val();
+                var comment = $("#form-wish-comment").val();
+                $.ajax({
+                    url: comment_url,
+                    type: 'POST',
+                    processData: false,
+                    contentType: 'application/json',
+                    dataType: 'json',
+                    headers: {
+                        'token': '1234abcde',
+                    },
+                    data: JSON.stringify({ "name": name, "comment": comment }),
+                    success: function (data) {
+                        var tmp = comment_template;
+                        tmp = tmp.replace("comment-name", name);
+                        tmp = tmp.replace("comment-desc", comment);
+                        $("#coba").append(tmp);
+                    },
+                    error: function () {
+                        // app.log("Device control failed");
+                    }
+                });
+
+            }
+            $("#form-wish-name").val("");
+            $("#form-wish-comment").val("");
+
             $(".form-wish").hide();
             $("#coba").show();
         })
