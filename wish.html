@@ -19,7 +19,7 @@
 </head>
 <body data-barba="wrapper">
     <main class="relative h-screen" data-barba="container" data-barba-namespace="wish">
-        <div class="fixed w-full h-full bg-cover bg-center bg-no-repeat" style="background-image:url(rabi.jpg);"></div>
+        <div class="fixed w-full h-full bg-cover bg-center bg-no-repeat" style="background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(rabi.jpg);"></div>
         <div class="fixed w-full h-full bg-black opacity-10"></div>
         <a href="gallery.html" class="arrow-up back-wish bg-white rounded-3xl fixed z-30 top-0 py-3 px-5 text-xs font-semibold m-3 left-0 opacity-0">< BACK</a>
         <div class="relative w-11/12 lg:w-5/12 h-3/5 flex flex-col justify-end items-start mx-auto">
@@ -32,11 +32,12 @@
                 </div>
                 <div class="name-liked relative z-0 transform -translate-y-full p-3 mt-5 rounded font-bold text-xl opacity-0 bg-white">Cak Shodiq Liked it</div>
             </div>
-            <div class="flex wrapper-responer relative left-20 opacity-0">
-                <img src="comment.svg" class="h-8 mx-2 relative block" alt="">
+            <div class="flex items-start wrapper-responer relative left-20 opacity-0 h-20 md:h-12">
+                <!-- <img src="comment.svg" class="h-8 mx-2 relative block" alt="">
                 <div class="counter-message absolute text-red-500 text-xs font-bold h-6 w-6 flex items-center justify-center bg-white rounded-full bottom-5 left-7">0</div>
                 <img src="thumb-up.svg" class="like-button h-8 mx-2 relative block -top-2 cursor-pointer">
-                <img src="heart.svg" class="heart-button h-8 mx-2 relative block -top-1 cursor-pointer">
+                <img src="heart.svg" class="heart-button h-8 mx-2 relative block -top-1 cursor-pointer"> -->
+                <button class="text-white bg-blue-500 p-3 rounded wish-button">Give a wish</button>
             </div>
         </div>
         <div class="scroll-wish fixed bottom-0 h-0 w-full flex justify-end md:justify-center">
@@ -45,7 +46,7 @@
             </div>
             <div id="coba" class="overflow-y-scroll w-full lg:w-6/12 md:px-5">
                 <div class="keong w-full flex items-center my-3 transition-all duration-500">
-                    <div class="h-8 hidden md:block md:h-16 w-8 md:w-16 rounded-full shadow-sm bg-cover bg-center bg-no-repeat" style="background-image: url(faza.jpg);"></div>
+                    <!-- <div class="h-8 hidden md:block md:h-16 w-8 md:w-16 rounded-full shadow-sm bg-cover bg-center bg-no-repeat" style="background-image: url(faza.jpg);"></div> -->
                     <div class="flex-1 mx-5 p-3 bg-komentar rounded shadow flex flex-col">
                         <div class="text-xs md:text-sm font-bold my-1">Fulan bin fulan</div>
                         <div class="text-xs md:text-sm my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -53,7 +54,7 @@
                     </div>
                 </div>
                 <div class="keong w-full flex items-center my-3 transition-all duration-500">
-                    <div class="h-8 hidden md:block md:h-16 w-8 md:w-16 rounded-full shadow-sm bg-cover bg-center bg-no-repeat" style="background-image: url(faza.jpg);"></div>
+                    <!-- <div class="h-8 hidden md:block md:h-16 w-8 md:w-16 rounded-full shadow-sm bg-cover bg-center bg-no-repeat" style="background-image: url(faza.jpg);"></div> -->
                     <div class="flex-1 mx-5 p-3 bg-komentar rounded shadow flex flex-col">
                         <div class="text-xs md:text-sm font-bold my-1">Fulan bin fulan</div>
                         <div class="text-xs md:text-sm my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -61,7 +62,7 @@
                     </div>
                 </div>
                 <div class="keong w-full flex items-center my-3 transition-all duration-500">
-                    <div class="h-8 hidden md:block md:h-16 w-8 md:w-16 rounded-full shadow-sm bg-cover bg-center bg-no-repeat" style="background-image: url(faza.jpg);"></div>
+                    <!-- <div class="h-8 hidden md:block md:h-16 w-8 md:w-16 rounded-full shadow-sm bg-cover bg-center bg-no-repeat" style="background-image: url(faza.jpg);"></div> -->
                     <div class="flex-1 mx-5 p-3 bg-komentar rounded shadow flex flex-col">
                         <div class="text-xs md:text-sm font-bold my-1">Fulan bin fulan</div>
                         <div class="text-xs md:text-sm my-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -69,6 +70,13 @@
                     </div>
                 </div>
             </div>
+            <form class="w-full lg:w-6/12 p-5 hidden form-wish">
+                <label class="text-white my-2 block">name</label>
+                <input type="text" class="w-full mx-auto block rounded h-12 outline-none px-2">
+                <label class="text-white my-2 block">wish</label>
+                <input type="text" class="w-full mx-auto block rounded h-12 outline-none px-2">
+                <button class="text-white bg-blue-500 p-2 rounded wish-button block mt-2 mr-auto md:mr-0 md:ml-auto submit-wish-button">Submit</button>
+            </form>
             <div class="heart-container w-2/12 h-full absolute md:relative overflow-hidden opacity-0"></div>
         </div>
     </main>

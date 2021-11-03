@@ -29,6 +29,24 @@
     top: 50%;
     transform: translate(-50%, -50%);
 }
+/* .timeline-slider {
+  height: 300px;
+  display: flex !important;
+  align-items: flex-end;
+} */
+.timeline-slider .h-timeline-item {
+  height: 25rem;
+  display: flex !important;
+}
+.bg-story {
+  background: linear-gradient(#1fb5fa90,#0082ff90);
+}
+.slick-dots li button:before {
+  color: white !important;
+}
+.h-timeline-item.slick-current > .circle-item{
+  transform: translateY(-60px);
+}
 .bg-its{
     background: linear-gradient(#08019a,#0082ff);
 }

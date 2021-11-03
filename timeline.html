@@ -20,37 +20,34 @@
     <title>Document</title>
 </head>
 <body data-barba="wrapper">
-    <main class="relative w-full h-screen overflow-hidden" data-barba="container" data-barba-namespace="home">
-        <div class="w-full h-full bg-center bg-cover bg-no-repeat" style="background-image: url(rabi.jpg);"></div>
-        <div class="fixed w-full h-full bg-black opacity-30 top-0"></div>
-        <div class="fixed w-full h-full flex flex-col justify-between top-0">
-            <div class="flex-1 flex justify-end text-white"></div>
-            <div class="flex-1 flex flex-col justify-center items-center">
-                <div class="overflow-hidden">
-                    <div class="invit relative invisible text-xl md:text-4xl text-white">
-                        THE WEDDING OF
+    <main class="relative w-full h-screen overflow-hidden" data-barba="container" data-barba-namespace="timeline">
+        <div class="flex flex-col justify-center items-center h-full w-full bg-center bg-cover" style="background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(rabi.jpg);">
+            <a href="couple.html" class="arrow-up slide-indicator opacity-0 cursor-pointer relative -top-10 text-sm md:text-3xl font-mono font-bold transform rotate-90 mb-5"><</a>
+            <a href="savethedate.html" class="arrow-down slide-indicator opacity-0 cursor-pointer relative top-10 text-sm md:text-3xl font-mono font-bold transform rotate-90">></a>
+            <h1 class="text-white font-bold text-2xl bg-story p-3 rounded-lg timeline-title relative opacity-0 -top-16">Our beautiful story</h1>
+            <div class="w-full md:w-8/12 lg:w-6/12 mx-auto timeline-slider opacity-0">   
+                <div class="h-timeline-item justify-center items-end">
+                    <div class="w-64 h-64 md:w-72 md:h-72 rounded-full bg-story circle-item relative transition-transform flex flex-col justify-center items-center">
+                        <h2 class="lobster-two text-white font-bold text-2xl">First Meet</h2>
+                        <span class="roboto text-white text-sm my-2">12 Jan 2021</span>
                     </div>
                 </div>
-                <div class="overflow-hidden">
-                    <div class="name relative invisible text-5xl md:text-8xl magic-clause text-white">
-                        Mutya dan Noval
+                <div class="h-timeline-item justify-center items-end">
+                    <div class="w-64 h-64 md:w-72 md:h-72 rounded-full bg-story circle-item relative transition-transform flex flex-col justify-center items-center">
+                        <h2 class="lobster-two text-white font-bold text-2xl">Engagement</h2>
+                        <span class="roboto text-white text-sm my-2">12 Jan 2021</span>
                     </div>
                 </div>
-                <div class="overflow-hidden">
-                    <div class="date relative invisible text-4xl magic-clause text-white">
-                        14 . 11. 2021
+                <div class="h-timeline-item justify-center items-end">
+                    <div class="w-64 h-64 md:w-72 md:h-72 rounded-full bg-story circle-item relative transition-transform flex flex-col justify-center items-center">
+                        <h2 class="lobster-two text-white font-bold text-2xl">Wedding</h2>
+                        <span class="roboto text-white text-sm my-2">12 Jan 2021</span>
                     </div>
-                </div>
-            </div>
-            <div class="flex-1 flex items-end justify-end">
-                <div class="mb-4 mr-6 flex items-end">
-                    <div class="hint-navigate text-white text-sm md:text-md relative opacity-0 -top-10">swipe / scroll / up / down</div>
                 </div>
             </div>
         </div>
-        <a href="couple.html" class="arrow-down opacity-0">turun</a>
     </main>
-    <div class="fixed z-10 sidebar top-0 w-full bg-its h-0">
+    <div class="fixed z-10 sidebar top-0 w-full h-0 bg-its">
         <div class="relative top-0 w-full h-20">
             <svg viewBox="0 0 12 10" class="hamburger absolute -top-10 right-0 opacity-0 mr-2 mt-4" height="30px" width="50px">
                 <path d="M10,2 L2,2" class="upper" style="fill: none;stroke-linecap: round;"/>
